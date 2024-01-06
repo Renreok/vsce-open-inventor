@@ -1,0 +1,25 @@
+{
+  "name": "open-inventor",
+  "displayName": "Open Inventor",
+  "description": "Syntax highlighting and editing support for Open Inventor scene graphs",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "iv",
+      "aliases": ["Open Inventor Scene Graph", "iv"],
+      "extensions": [".iv"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "iv",
+      "scopeName": "source.iv",
+      "path": "./syntaxes/iv.tmLanguage.json"
+    }]
+  }
+}
