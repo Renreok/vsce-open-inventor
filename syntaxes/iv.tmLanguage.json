@@ -3,18 +3,58 @@
 	"name": "Open Inventor Scene Graph",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#definition"
+		},
+		{
+			"include": "#use"
+		},
+		{
+			"include": "#fieldlist"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#booleanconstant"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#enumvalue"
+		},
+		{
+			"include": "#designator"
+		},
+		{
+			"include": "#comment"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.iv",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+		"definition": {
+			"match": "\\bDEF\\b\\s+(?:(\\w+)?)",
+			"name": "keyword.other.iv.def",
+			"captures": {
+				"1": {
+					"name": "variable.name"
+				}
+			}
+		},
+		"use": {
+			"match": "\\bUSE\\b",
+			"name": "keyword.other.iv.use"
+		},
+		"enumvalue": {
+			"match": "\\b[A-Z_]+\\b",
+			"name": "constant.other.enum"
+		},
+		"booleanconstant": {
+			"match": "\\b(?:TRUE|FALSE)\\b",
+			"name": "constant.language.boolean"
+		},
+		"numbers": {
+			"match": "\\b[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?\\b",
+			"name": "constant.numeric"
 		},
 		"strings": {
 			"name": "string.quoted.double.iv",
@@ -26,6 +66,18 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"designator": {
+			"name": "keyword.control.iv.designator",
+			"match": "(\\b[A-Za-z][A-Za-z0-9]+\\b)"
+		},
+		"comment": {
+			"name": "comment",
+			"match": "(#.*)"
+		},
+		"fieldlist": {
+			"name": "source.iv",
+			"match": "fields\\s*\\[.*\\]"
 		}
 	},
 	"scopeName": "source.iv"

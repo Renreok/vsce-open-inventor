@@ -15,7 +15,7 @@ This extension does not have any settings.
 
 - Syntax highlighting is restricted to a basic syntactic analysis using a Textmate grammar
   - It does not distinguish between node and field names
-  - It cannot distinguish between node/field names and constant enum values
+  - Enum values are recognized as such if they consist of capital letters and underscores only
 - Folding only works correctly when a line contains only a single curly bracket or a single pair of curly brackets
 
 ## Release Notes
