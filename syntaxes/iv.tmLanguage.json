@@ -59,13 +59,7 @@
 		"strings": {
 			"name": "string.quoted.double.iv",
 			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.iv",
-					"match": "\\\\."
-				}
-			]
+			"end": "\""
 		},
 		"designator": {
 			"name": "keyword.control.iv.designator",
