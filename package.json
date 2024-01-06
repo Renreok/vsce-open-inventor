@@ -2,7 +2,13 @@
   "name": "open-inventor",
   "displayName": "Open Inventor",
   "description": "Syntax highlighting and editing support for Open Inventor scene graphs",
-  "version": "0.0.1",
+  "icon": "images/hello_cone.png",
+  "version": "1.0.0",
+  "publisher": "Renreok",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Renreok/vsce-open-inventor"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
